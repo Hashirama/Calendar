@@ -80,13 +80,11 @@ public class Calender {
         for(int j = 0; j != 6; ++j) {
             for(int i = firstDayOfWeek - 1; i != 7 && cnt != daysInMonth +1; ++i) {
                 model.setValueAt(cnt, j, i);
-                if(cnt == 10) {
-                    table.setDefaultRenderer(table.getColumnClass(0), new renderer());
-                }
                 ++cnt;
             }
             firstDayOfWeek = 1;
         }
+	table.setDefaultRenderer(table.getColumnClass(0), new renderer());
                 
     }
 static class renderer extends DefaultTableCellRenderer{
