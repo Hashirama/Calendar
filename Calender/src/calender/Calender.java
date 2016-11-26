@@ -95,7 +95,7 @@ static class renderer extends DefaultTableCellRenderer{
         super.getTableCellRendererComponent(table, value, selected, focused, row, column);
         setBackground(table.getBackground());
         if (value != null){
-            if (Integer.parseInt(value.toString()) == 10){ //Today
+            if (Integer.parseInt(value.toString()) == 10){
                 setBackground(Color.LIGHT_GRAY);
             }
         }
